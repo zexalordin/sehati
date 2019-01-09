@@ -1,0 +1,108 @@
+body, html {
+	margin: 0;
+ 	height: 100%;
+
+}
+.section {
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	background-image: url(../image/forest.jpeg);
+	background-size: cover;
+	transition: opacity 700ms ease-in; 
+}
+.logo{
+	position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -90px;
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	opacity: 0;
+	transition: opacity 700ms ease-in 1s;
+	background-color: #00b5ad;
+}
+.tree_logo{
+	width: 200px;
+	height: 0px;
+	background-image: url(../image/index-tree.PNG);
+	transition: height 700ms ease-in 2s;
+}
+.text{
+	position: absolute;
+    top: 62%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -220px;
+	transition: left 500ms ease-in 1s;
+}
+.text h3.ui.center.aligned.header{
+    font-size: 0px;
+	color: snow;
+	text-shadow: 2px 1px #000000;
+	transition: font-size 500ms ease-in 4s;
+}
+.bold_eco{
+	font-weight: bold;
+    font-size: 0px;
+	transition: font-size 500ms ease-in 4s;
+}
+.enter_btn{
+	position: absolute;
+    top: 75%;
+    left: -50%;
+    margin-top: -50px;
+    margin-left: -50px;
+	transition: left 500ms ease-in 1s;
+}
+button.ui.teal.button{
+	padding: 1em 2.5em;
+}
+.js-section-animate{
+	opacity: 1;
+}
+.js-enter_btn-animate{
+	left: 50%;
+	-webkit-animation-delay: 2s;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-name: enter_btn;
+}
+.js-logo-animate{
+	opacity: 1;
+	-webkit-animation-delay: 3s;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-name: logo;
+}
+.js-tree_logo-animate{
+	height: 200px;
+}
+h3.ui.center.aligned.header.js-text_1-animate{
+	font-size: 20px;
+}
+.js-text_2-animate{
+	font-size: 50px;
+}
+@keyframes enter_btn {
+	0%{
+		transform: rotate(0);
+	}
+	33%{
+		transform: rotate(15deg);
+	}
+	66%{
+		transform: rotate(-15deg);
+	}
+	100%{
+		transform: rotate(0);
+	}
+}
+@keyframes logo {
+	0%{
+		transform: rotate(0);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
